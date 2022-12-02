@@ -96,7 +96,7 @@
 // }
 
 // for in loop
-let numbers = [8, 9, 3, 12, 34];
+// let numbers = [8, 9, 3, 12, 34];
 // for(let numb in numbers) {
 //     console.log(numb);
 // }
@@ -137,10 +137,104 @@ let numbers = [8, 9, 3, 12, 34];
 // console.log(sumOf(1, 2, 3))
 
 //Constructor function
-function Person(...details) {
-    this.firstName = details[0];
-    this.lastName = details[1];
-    this.email = details.at(-1);
-}
-let person1 = new Person("Konke", "Deno", "deno@gmail.com")
-console.log(person1)
+// function Person(...details) {
+//     this.firstName = details[0];
+//     this.lastName = details[1];
+//     this.email = details.at(-1);
+// }
+// let person1 = new Person("Konke", "Deno", "deno@gmail.com")
+// console.log(person1)
+
+//Reduce - allows you to take one value 
+// let numbers = [1, 2, 3, 4, 5];
+// let people = [
+//     {
+//         id: 1,
+//         firstName: 'Lerato',
+//         surname: 'Kganyago'
+//     },
+//     {
+//     id: 2,
+//     firstName: 'Kod',
+//     surname: 'Album'
+// }
+// ];
+// console.table(people);
+
+// let peopleFirstName = people.map((item)=>{
+//     return item.firstName;
+// })
+// console.log(peopleFirstName);
+// let sum = numbers.reduce((a, b)=>{
+//     return a + b;
+// })
+// console.log(`sum: ${sum}`);
+
+//Mapping on array - allows you to modify the element within an array
+// let double = numbers.map((item)=> {
+//     return item * 2;
+// })
+// console.log("Current array: ", numbers);
+// console.log("Double array: ", double);
+
+//Hoisting is the ability to call your function on top of your function
+
+// function addition(...args) {
+// let sum = args.reduce((a, b)=>{
+//     return a + b;
+// }) 
+// console.log(sum);
+// console.log(args);
+// }
+
+// addition(1, 2, 3, 4, 5);
+
+// function addition(...args) {
+//     let sum = args.filter(Number).reduce((a, b)=>{
+//         return a + b;
+//     })
+//     console.log("sum: ", sum);
+//     console.log(args); } 
+
+//Fetch API
+// fetch('../data/data.json')
+// .then((Response)=>{
+//     return Response.json();
+// })
+// .then((data)=>{
+//     let results = data.results
+//    console.table(results);
+// })
+
+//async function
+
+// async function fetchData(){
+//     let data = await fetch('http://api.chucknorris.io/jokes/random')
+//     return res.json();
+// }
+// async function display() {
+//     let results = await fetchData();
+// // }
+
+// fetch('https://api.chucknorris.io/jokes/random')
+// .then((res)=>{
+//     return res.json();
+// })
+// .then((data)=>{
+//     let tbody = document.querySelector('tbody');
+//     Object.keys(data).forEach( (item)=>{
+//         if(data[item].length){
+//             console.log(`${item}: ${data[item]}`);
+//             tbody.innerHTML +=
+//             `
+//                 <tr>
+//                     <td>${item}</td>
+//                     <td>${data[item]}</td>
+//                 </tr>
+//             `
+//         }
+//     } )
+// })
+
+//local storage
+
